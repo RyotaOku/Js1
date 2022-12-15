@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>js1 - event</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background: #333;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color: #fff;
+    padding: .5rem .6rem;
+  }
+
+  .wrap {
+    display: flex;
+    height: 40vh;
+  }
+
+  .wrap div {
+    margin: 20px;
+    width: 50%;
+    border: dotted 3px #333;
+    overflow: scroll;
+  }
+
+  .wrap .single {
+    width: 100%;
+  }
+
+  .event {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 100px;
+  }
+
+  #transition:hover {
+    opacity: 0;
+    transition: 1s;
+  }
+
+  #transition {
+    opacity: 1;
+    /* transition: 1s; */
+  }
+</style>
+
+<body>
+  <header>
+    <h1>eventを扱う</h1>
+  </header>
+
+  <div class="wrap">
+    <div>
+      <h2>クリック関係</h2>
+      <p>クリックされたら赤色に、ダブルクリックされたら青色に変わります↓↓</p>
+      <p id="evt_clicks" class="event">クリックイベント</p>
+    </div>
+
+    <div>
+      <h2>マウスの操作関係</h2>
+      <p>マウスが乗った、離れた、対象の上で動いた、対象の上で左ボタンを押した、離したなどのイベント。<br>
+        マウスをホバーすると水色に、マウスが離れると元の色に戻ります。↓↓
+      </p>
+      <p class="event" id="mouse">マウスイベント</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div>
+      <h2>フォーカス関係</h2>
+      <p>フォーカスされた、フォーカスが離れたなどのイベント。<br>
+        フォーカスすると色付き特大に、フォーカスが離れると元の状態に戻ります。↓↓</p>
+      <input type="text" name="" id="focus" class="event">
+    </div>
+
+    <div>
+      <h2>トランジション関係</h2>
+      <p>トランジションに関係するイベント。<br>
+        ontransitionendでトランジションが終了すると文字色がgoldになります。</p>
+      <p id="transition" class="event">トランジション</p>
+    </div>
+
+  </div>
+  <div class="wrap">
+    <div class="single">
+      <h2>変更した時</h2>
+      <p>inputタグ等を変更したときのイベント。<br>
+      onchangeで変更が確定してから、oninputでなら選んでいる間も含めて即時変更される。<br>
+    下のinputタグに対してはoninputを指定してるので即時変更されます。↓↓</p>
+      <input type="color" name="" id="change" class="event"><br>
+      <input type="button" value="もとに戻す" id="back">
+    </div>
+  </div>
+
+  <script src="js/sample-event.js"></script>
+  <script src="js/temp.js" type="text/javascript"></script>
+</body>
+
+</html>

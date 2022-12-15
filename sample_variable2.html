@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>共産くん 改</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+  }
+
+  header {
+    background: #333;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color: #fff;
+    padding: .5rem .6rem;
+  }
+
+  .main {
+    width: 100%;
+    height: calc(100vh - 45px);
+    background: linear-gradient(45deg, #3bade3, #9844b7, #44ea76);
+    /*グラデーションを定義*/
+    background-size: 200% 200%;
+    /*サイズを大きくひきのばす*/
+    animation: bggradient 20s ease infinite;
+  }
+
+  @keyframes bggradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .main h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    padding: 20vh 0 6vh;
+  }
+
+  .main p {
+    text-align: center;
+    color: #fff;
+  }
+  .main p span {
+    margin: 3px 0;
+    font-size: 0.8rem;
+  }
+  #input_price {
+    width: 70%;
+    height: 50px;
+    display: block;
+    margin: 10vh auto;
+  }
+  .main .tax {
+    font-size: 1.3rem;
+    margin-bottom: 5vh;
+  }
+  #tax {
+    font-size:inherit;
+  }
+  #taxPlus {
+    font-size: 3rem;
+  }
+
+</style>
+
+<body>
+  <header>
+    <h1>変数を扱う その1 ver.2.0</h1>
+  </header>
+  <div class="main">
+    <h2>消費税を計算するJs「共産くん」</h2>
+    <p>旧ソ連には今の資本主義諸国が持つような税制は存在しなかった！<br>
+      これは「税」に苦しむ資本主義者たちのための消費税計算プログラムだ！<br>
+      <span>税価格と税込価格を表示し、リアルタイム計算可能なver2.0です。</span>
+    </p>
+    <input type="text" id="input_price" value="" placeholder="金額を入力">
+    <p class="tax">消費税額：<span id="tax"></span>円</p>
+    <p class="tax">税込価格：<span id="taxPlus"></span>円</p>
+  </div>
+  <script src="js/sample_variable2.js"></script>
+  <script src="js/temp.js" type="text/javascript"></script>
+</body>
+
+</html>

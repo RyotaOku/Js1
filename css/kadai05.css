@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* 文字関連 */
+h2 {
+	font-size: 2.4em; 
+}
+
+img {
+	vertical-align: bottom;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 2% 5%;
+}
+
+.item {	
+	overflow: hidden;
+	width: 30%;
+	margin: 0 15px 15px 0;
+}
+
+.item img {
+	width: 100%;
+	transition: ease-in-out 1s;
+	transform: scale(1, 1);
+	opacity: .75;
+}
+
+.item img.over {
+	transition: ease-in-out 1.4s;
+	transform: scale(1.5, 1.5);
+	opacity: 1;
+}
