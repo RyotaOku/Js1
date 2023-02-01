@@ -31,7 +31,7 @@ a:active {
   background: #fff;
   padding: 5px;
   border: 1px solid #4abbc1;
-  transition: .7s ease-in-out;
+  transition: .7s .5s cubic-bezier(0,1.55,1,.9);
 }
 
 #category-navi > ul {

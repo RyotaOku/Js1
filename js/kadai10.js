@@ -25,6 +25,7 @@
   // })
   for (let i = 0; i < figure.length; i++) {
     let src = img[i].getAttribute('src')
+    console.log(src)
     img[i].removeAttribute('src')
     figure[i].addEventListener('click', function () {
       if (img[i].src === '') {
